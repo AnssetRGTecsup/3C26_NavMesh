@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8ef46cf3b928fd449def2dac3b39e8f, type: 3}
+  m_Name: Class Data Herrero (Carrasco)
+  m_EditorClassIdentifier: 
+  animactionCurveHP:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.9461715
+      outSlope: 1.9461715
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.15066828
+    - serializedVersion: 3
+      time: 50
+      value: 100
+      inSlope: 0.9779986
+      outSlope: 0
+      tangentMode: 65
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 90
+      value: 100
+      inSlope: -0
+      outSlope: 1.8144463
+      tangentMode: 5
+      weightedMode: 0
+      inWeight: 0.18347508
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animactionCurveAtk:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 9.740681
+      outSlope: 9.740681
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.14531644
+    - serializedVersion: 3
+      time: 57.94535
+      value: 212.62213
+      inSlope: 10.4903345
+      outSlope: 10.4903345
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 90
+      value: 1000
+      inSlope: 24.563608
+      outSlope: 24.563608
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animactionCurveMagic:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.10935593
+      value: 0
+      inSlope: 3.5016751
+      outSlope: 3.5016751
+      tangentMode: 5
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.09367397
+    - serializedVersion: 3
+      time: 89
+      value: 1
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 90
+      value: 5000
+      inSlope: 4999
+      outSlope: 3.713881
+      tangentMode: 5
+      weightedMode: 0
+      inWeight: 0.08019443
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  Level: 90
