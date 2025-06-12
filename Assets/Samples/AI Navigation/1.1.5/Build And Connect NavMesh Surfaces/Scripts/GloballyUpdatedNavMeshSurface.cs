@@ -12,11 +12,14 @@ namespace Unity.AI.Navigation.Samples
     {
         static bool s_NeedsNavMeshUpdate;
 
+        public static event Action OnUpdate;
+        public static Action onUpdate;
+
         NavMeshSurface m_Surface;
 
         public static void RequestNavMeshUpdate()
         {
-            s_NeedsNavMeshUpdate = true;
+            OnUpdate?.Invoke();
         }
 
         void Start()
@@ -25,13 +28,23 @@ namespace Unity.AI.Navigation.Samples
             m_Surface.BuildNavMesh();
         }
 
-        void Update()
+        private void OnEnable()
         {
-            if (s_NeedsNavMeshUpdate)
-            {
-                m_Surface.UpdateNavMesh(m_Surface.navMeshData);
-                s_NeedsNavMeshUpdate = false;
-            }
+            OnUpdate += UpdateNavMeshSurface;
+
+            onUpdate = UpdateNavMeshSurface;
+        }
+
+        private void OnDisable()
+        {
+            OnUpdate -= UpdateNavMeshSurface;
+
+            onUpdate = null;
+        }
+
+        private void UpdateNavMeshSurface()
+        {
+            m_Surface.UpdateNavMesh(m_Surface.navMeshData);
         }
     }
 }

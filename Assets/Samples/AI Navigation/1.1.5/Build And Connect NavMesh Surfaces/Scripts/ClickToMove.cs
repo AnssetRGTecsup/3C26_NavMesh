@@ -24,7 +24,18 @@ namespace Unity.AI.Navigation.Samples
     
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetMouseButton(0))
+            {
+                var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray.origin, ray.direction, out m_HitInfo, Mathf.Infinity, layers) && !Input.GetKey(KeyCode.LeftShift))
+                {
+                    m_Agent.destination = m_HitInfo.point;
+                }
+            }
+            
+
+
+            /*if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 ChangeFollowCondition();
             }
@@ -34,7 +45,7 @@ namespace Unity.AI.Navigation.Samples
             if (_follow)
             {
                m_Agent.destination = pivot.position;
-            }
+            }*/
         }
 
         public void ChangeFollowCondition()
